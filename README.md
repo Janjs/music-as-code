@@ -7,19 +7,12 @@ The composition is the source file. A chat response or audio preview is not a
 substitute. Each skill writes that source, checks what it can locally, and
 hands off to the official player or compiler.
 
-## Skill
+## Skills
 
 | Skill | Summary | Source |
 | --- | --- | --- |
-| Strudel | Creates, edits, explains, and repairs playable Strudel compositions in local `.strudel.js` files. | [`skills/strudel`](skills/strudel) |
-
-[Strudel](https://strudel.cc/) is a browser-based live-coding environment for
-algorithmic music, based on the Tidal Cycles pattern language.
-
-The Strudel skill writes the source, converts BPM to Strudel cycles
-correctly, checks JavaScript syntax locally, and returns a playable
-`strudel.cc` link. It must not open a browser, Playwright, or the REPL to
-validate. The user pressing play is the runtime check.
+| Strudel | Playable live-coding music in local `.strudel.js` files. | [`skills/strudel`](skills/strudel) |
+| LilyPond | Engraved scores in local `.ly` files, opened in Hacklily. | [`skills/lilypond`](skills/lilypond) |
 
 ## Installation
 
@@ -29,47 +22,77 @@ Install with the Skills CLI:
 npx skills add Janjs/music-as-code
 ```
 
-This installs the skill for the coding agents supported by the Skills CLI. Run
-the same command again to update it.
+This installs the skills for the coding agents supported by the Skills CLI. Run
+the same command again to update them.
 
-After installation, ask your agent to create or edit Strudel music. For
-example:
+### Strudel
+
+[Strudel](https://strudel.cc/) is a browser-based live-coding environment for
+algorithmic music, based on the Tidal Cycles pattern language.
+
+The skill writes `.strudel.js`, checks JavaScript syntax locally, and returns a
+playable `strudel.cc` link. It must not open a browser, Playwright, or the REPL
+to validate. The user pressing play is the runtime check.
 
 ```text
 Make a sparse 112 BPM dub-techno loop with restrained 909 drums,
 a minor bass pulse, and hazy electric-piano chords.
 ```
 
-The agent writes a `.strudel.js` file, runs a local syntax check, and returns
-both the local file and a playable `strudel.cc` link. Open the link and press
-play to hear it.
+### LilyPond
+
+[LilyPond](https://lilypond.org/) engraves scores from a text language.
+[Hacklily](https://www.hacklily.org/wasm) is the browser editor: source in the
+URL, score and playback in the page.
+
+The skill writes `.ly` and returns a Hacklily link. It must not open a browser
+to validate. If `lilypond` is installed, it also writes PDF and MIDI next to
+the source (`brew install lilypond`, or the installer from lilypond.org).
+
+```text
+Write a short piano sarabande in D minor, two eight-bar phrases,
+with a simple left-hand bass.
+```
+
+Compositions go in `music/`, which is gitignored.
 
 ## Repository layout
 
 ```text
-examples/                     Example Strudel compositions
 skills/
   strudel/
-    SKILL.md                  Agent instructions
-    references/              Language and sound references
-    scripts/strudel-url.mjs   Builds a durable strudel.cc URL from a file
+    SKILL.md                    Agent instructions
+    references/                 Language and sound references
+    scripts/strudel-url.mjs     Builds a durable strudel.cc URL from a file
+  lilypond/
+    SKILL.md                    Agent instructions
+    references/                 Language reference
+    scripts/lilypond-url.mjs    Builds a durable Hacklily URL from a file
+    scripts/lilypond-compile.mjs  Compiles a .ly file to PDF and MIDI
 ```
 
 ## Validation
 
-The Strudel skill checks ordinary JavaScript syntax with `node --check`. That
-catches syntax errors but not missing Strudel functions, unavailable sounds,
-or runtime evaluation errors. The user discovers those by opening the REPL
-link and pressing play.
-
-Build a link from any composition:
+Strudel: `node --check` catches JavaScript syntax errors, not missing Strudel
+functions or sounds. The user discovers those by opening the REPL link and
+pressing play.
 
 ```sh
 node skills/strudel/scripts/strudel-url.mjs music/your-track.strudel.js
 ```
 
-The REPL link uses the full source encoded in the URL fragment. It does not
-depend on a stored share identifier.
+The REPL link uses the full source encoded in the URL fragment.
+
+LilyPond: Hacklily engraves the source from the URL. Local `lilypond` is an
+optional extra for PDF and MIDI files.
+
+```sh
+node skills/lilypond/scripts/lilypond-url.mjs music/your-score.ly
+node skills/lilypond/scripts/lilypond-compile.mjs music/your-score.ly
+```
+
+The Hacklily link uses the full source encoded in the URL fragment. The compile
+script exits 2 if `lilypond` is not on `PATH`.
 
 ## License
 
