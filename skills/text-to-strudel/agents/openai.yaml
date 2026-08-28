@@ -1,0 +1,4 @@
+interface:
+  display_name: "Text to Strudel"
+  short_description: "Compose and edit local Strudel music"
+  default_prompt: "Use $text-to-strudel to create a playable Strudel composition from my description."
