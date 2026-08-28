@@ -1,6 +1,6 @@
 ---
-name: text-to-strudel
-description: Create, edit, explain, and repair playable Strudel live-coding music in local `.strudel.js` files. Use for natural-language music requests, Strudel patterns, algorithmic composition, remixes, arrangement changes, or Strudel debugging. Do not use for rendered audio production, notation engraving, or DAW projects unless the user also wants Strudel source.
+name: strudel
+description: Create, edit, explain, and repair playable Strudel live-coding music in local `.strudel.js` files. Hand off a local file and a strudel.cc link after a local syntax check. Never open a browser or REPL to validate. Use for natural-language music requests, Strudel patterns, algorithmic composition, remixes, arrangement changes, or Strudel debugging. Do not use for rendered audio production, notation engraving, or DAW projects unless the user also wants Strudel source.
 ---
 
 # Text to Strudel
@@ -8,6 +8,19 @@ description: Create, edit, explain, and repair playable Strudel live-coding musi
 Create readable Strudel source that the user can keep editing and performing.
 The local `.strudel.js` file is the primary artifact. A chat response or audio
 preview is not a substitute for the source.
+
+## Speed
+
+The user is waiting to press play. Once the `.strudel.js` file exists, syntax
+check has run, and the `strudel.cc` link is in the reply, **stop**.
+
+Do not open Playwright, a browser, strudel.cc, a headless runtime, or any REPL
+to validate, preview, query cycles, screenshot, or debug. Those tools being
+available is not permission to use them. A missing sample is cheaper than
+making the user wait. They will hear problems when they press play.
+
+Write the file, check syntax, build the link, reply. That is the whole job
+unless `node --check` failed or the user later reports a REPL error.
 
 ## Working defaults
 
@@ -46,13 +59,13 @@ specific function or sound instead of loading unrelated material.
 4. Check ordinary JavaScript syntax with `node --check <file>` when the source
    does not rely on REPL-only `$:` labels. A syntax check does not prove that
    Strudel functions or sounds exist.
-5. When a Strudel runtime or local viewer is available, evaluate the source
-   without autoplay and inspect several cycles. Confirm it produces events and
-   does not report missing functions, missing samples, or invalid mini-notation.
-6. Repair the smallest responsible part and repeat the failed check.
-7. Return the source path, the checks that actually ran, the tempo assumption,
-   and any playback limitation. If a local Strudel viewer exists, open the
-   explicit file there and return its link.
+5. Build a playable REPL link with
+   `node skills/strudel/scripts/strudel-url.mjs <file>` or equivalent URL
+   encoding: `https://strudel.cc/#` + `encodeURIComponent(source)`.
+6. Reply with the source path, the link, whether `node --check` passed, and
+   the tempo assumption. Then stop.
+7. If the user reports a REPL error, repair the smallest responsible part from
+   the error text and repeat steps 4–6. Do not open a browser to find the error.
 
 ## Editing rules
 
@@ -68,6 +81,17 @@ specific function or sound instead of loading unrelated material.
 
 ## Handoff
 
-Include the exact `.strudel.js` path. Mention whether the file passed syntax
-checking and runtime evaluation. Never claim playback or listening occurred
-unless it actually did.
+Always include:
+
+- The exact `.strudel.js` path
+- A `strudel.cc` link built from that file's source
+- Whether `node --check` passed
+- The tempo assumption (BPM and `.cpm()` value)
+
+Optional:
+
+- If the agent environment supports inline audio playback, the agent may attach
+  a short preview. Treat that as a convenience, not the deliverable.
+
+Never claim playback or listening occurred unless the user actually heard it or
+the agent truly rendered audio in a supported environment.
