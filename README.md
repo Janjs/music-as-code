@@ -3,9 +3,9 @@
 Agent skills that turn natural-language music requests into local source
 files you can edit, version, and play.
 
-The composition is the source file. A chat response or audio preview is not a
-substitute. Each skill writes that source, checks what it can locally, and
-hands off to the official player or compiler.
+Each request produces an editable music file: `.strudel.js` for Strudel or
+`.ly` for LilyPond. The skill checks the file locally, then gives it to the
+official player or compiler.
 
 <table>
   <tr>
