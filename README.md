@@ -5,7 +5,7 @@ files you can edit, version, and play.
 
 Each request produces an editable music file: `.strudel.js` for Strudel or
 `.ly` for LilyPond. The skill checks the file locally, then gives it to the
-official player or compiler.
+official player or compiler. Examples:
 
 <table>
   <tr>
