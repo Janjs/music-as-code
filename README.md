@@ -1,18 +1,18 @@
 # music-as-code 🎵
 
-<table>
-  <tr>
-    <td width="50%"><video src="assets/strudel-example.mp4" controls></video></td>
-    <td width="50%"><video src="assets/lilypond-example.mp4" controls></video></td>
-  </tr>
-</table>
-
 Agent skills that turn natural-language music requests into local source
 files you can edit, version, and play.
 
 The composition is the source file. A chat response or audio preview is not a
 substitute. Each skill writes that source, checks what it can locally, and
 hands off to the official player or compiler.
+
+<table>
+  <tr>
+    <td width="50%"><a href="assets/strudel-example.mp4"><img src="assets/strudel-example.gif" alt="Strudel example" width="100%"></a></td>
+    <td width="50%"><a href="assets/lilypond-example.mp4"><img src="assets/lilypond-example.gif" alt="LilyPond example" width="100%"></a></td>
+  </tr>
+</table>
 
 ## 🧩 Skills
 
