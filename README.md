@@ -10,11 +10,26 @@ hands off to the official player or compiler.
 <table>
   <tr>
     <th>Strudel</th>
-    <th>LilyPond</th>
+    <th>LilyPond </th>
   </tr>
   <tr>
-    <td width="50%"><a href="assets/strudel-example.mp4"><img src="assets/strudel-example.gif" alt="Strudel example" width="100%"></a><br><a href="assets/strudel-example.mp4">▶ Play with sound</a></td>
-    <td width="50%"><a href="assets/lilypond-example.mp4"><img src="assets/lilypond-example.gif" alt="LilyPond example" width="100%"></a><br><a href="assets/lilypond-example.mp4">▶ Play with sound</a></td>
+    <td width="50%">
+ 
+
+
+https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef
+
+
+</td><td width="50%">
+
+
+
+
+https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759
+
+
+</td>
+      
   </tr>
 </table>
 
