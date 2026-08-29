@@ -25,7 +25,7 @@ npx skills add Janjs/music-as-code
 This installs the skills for the coding agents supported by the Skills CLI. Run
 the same command again to update them.
 
-### Strudel
+### 🌀 Strudel
 
 [Strudel](https://strudel.cc/) is a browser-based live-coding environment for
 algorithmic music, based on the Tidal Cycles pattern language.
@@ -40,7 +40,7 @@ Make a sparse 112 BPM dub-techno loop with restrained 909 drums,
 a minor bass pulse, and hazy electric-piano chords.
 ```
 
-### LilyPond
+### 🎼 LilyPond
 
 [LilyPond](https://lilypond.org/) engraves scores from a text language.
 [Hacklily](https://www.hacklily.org/wasm) is the browser editor: source in the
