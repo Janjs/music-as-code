@@ -1,4 +1,4 @@
-# music-as-code
+# music-as-code 🎵
 
 Agent skills that turn natural-language music requests into local source
 files you can edit, version, and play.
@@ -7,14 +7,14 @@ The composition is the source file. A chat response or audio preview is not a
 substitute. Each skill writes that source, checks what it can locally, and
 hands off to the official player or compiler.
 
-## Skills
+## 🧩 Skills
 
 | Skill | Summary | Source |
 | --- | --- | --- |
 | Strudel | Playable live-coding music in local `.strudel.js` files. | [`skills/strudel`](skills/strudel) |
 | LilyPond | Engraved scores in local `.ly` files, opened in Hacklily. | [`skills/lilypond`](skills/lilypond) |
 
-## Installation
+## ⚙️ Installation
 
 Install with the Skills CLI:
 
@@ -59,7 +59,7 @@ with a simple left-hand bass.
 
 Compositions go in `music/`, which is gitignored.
 
-## Strudel documentation
+## 📚 Strudel documentation
 
 The Strudel skill ships with three references:
 
@@ -89,7 +89,7 @@ skills/
     scripts/lilypond-compile.mjs  Compiles a .ly file to PDF and MIDI
 ```
 
-## Validation
+## ✅ Validation
 
 Strudel: `node --check` catches JavaScript syntax errors, not missing Strudel
 functions or sounds. The user discovers those by opening the REPL link and
