@@ -1,5 +1,12 @@
 # music-as-code 🎵
 
+<table>
+  <tr>
+    <td width="50%"><video src="assets/strudel-example.mp4" controls></video></td>
+    <td width="50%"><video src="assets/lilypond-example.mp4" controls></video></td>
+  </tr>
+</table>
+
 Agent skills that turn natural-language music requests into local source
 files you can edit, version, and play.
 
@@ -32,6 +39,10 @@ algorithmic music, based on the Tidal Cycles pattern language.
 
 Each request produces a local `.strudel.js` file, a JavaScript syntax check,
 and a playable `strudel.cc` link. Open the link and press play to hear it.
+
+> **Codex users:** Open generated Strudel links in an external browser. The
+> Codex internal browser may keep the previous editor state instead of loading
+> the source encoded in the link.
 
 Try it with an example prompt:
 
