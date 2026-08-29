@@ -9,8 +9,12 @@ hands off to the official player or compiler.
 
 <table>
   <tr>
-    <td width="50%"><a href="assets/strudel-example.mp4"><img src="assets/strudel-example.gif" alt="Strudel example" width="100%"></a></td>
-    <td width="50%"><a href="assets/lilypond-example.mp4"><img src="assets/lilypond-example.gif" alt="LilyPond example" width="100%"></a></td>
+    <th>Strudel</th>
+    <th>LilyPond</th>
+  </tr>
+  <tr>
+    <td width="50%"><a href="assets/strudel-example.mp4"><img src="assets/strudel-example.gif" alt="Strudel example" width="100%"></a><br><a href="assets/strudel-example.mp4">▶ Play with sound</a></td>
+    <td width="50%"><a href="assets/lilypond-example.mp4"><img src="assets/lilypond-example.gif" alt="LilyPond example" width="100%"></a><br><a href="assets/lilypond-example.mp4">▶ Play with sound</a></td>
   </tr>
 </table>
 
