@@ -25,15 +25,6 @@ npx skills add Janjs/music-as-code
 This installs the skills for the coding agents supported by the Skills CLI. Run
 the same command again to update them.
 
-Or install the Codex plugin with Codex 0.142.0 or newer:
-
-```sh
-codex plugin marketplace add Janjs/music-as-code
-codex plugin add music-as-code@music-as-code
-```
-
-Restart Codex if the newly installed skills do not appear.
-
 ### Strudel
 
 [Strudel](https://strudel.cc/) is a browser-based live-coding environment for
