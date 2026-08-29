@@ -1,0 +1,38 @@
+{
+  "name": "music-as-code",
+  "version": "0.1.0",
+  "description": "Strudel live-coding and LilyPond notation skills for creating editable music source files.",
+  "author": {
+    "name": "Janjs",
+    "url": "https://github.com/Janjs"
+  },
+  "homepage": "https://github.com/Janjs/music-as-code",
+  "repository": "https://github.com/Janjs/music-as-code",
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "music",
+    "strudel",
+    "lilypond",
+    "live-coding",
+    "notation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "music-as-code",
+    "shortDescription": "Create editable Strudel patterns and LilyPond scores.",
+    "longDescription": "music-as-code turns natural-language music requests into editable Strudel live-coding patterns or LilyPond notation, with local checks and links to the official players.",
+    "developerName": "Janjs",
+    "category": "Productivity",
+    "capabilities": [
+      "Write",
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/Janjs/music-as-code",
+    "defaultPrompt": [
+      "Make a playable Strudel track.",
+      "Write a LilyPond score and open it in Hacklily.",
+      "Repair this Strudel or LilyPond source file."
+    ],
+    "brandColor": "#7C3AED"
+  }
+}
