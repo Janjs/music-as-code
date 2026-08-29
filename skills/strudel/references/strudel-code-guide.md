@@ -1,6 +1,11 @@
-# Strudel Code Guide
+# Strudel code guide
 
-This guide condenses all Strudel learn content into a single reference for writing Strudel code.
+This is a compact working reference for writing Strudel code. It is not a
+complete API contract and may lag behind Strudel. For current documentation and
+topic-specific links, use [official-docs.md](official-docs.md). If the two
+disagree, follow the official documentation.
+
+Last reviewed against strudel.cc: 2026-08-29.
 
 ## What Strudel Is
 - Strudel is a browser-based live coding environment based on Tidal Cycles.

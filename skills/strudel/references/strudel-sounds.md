@@ -1,6 +1,13 @@
-# Strudel Default Sounds Catalog
+# Strudel default sounds catalog
 
-These sounds are available in Strudel by default — no `samples()` loading required.
+This file is a snapshot of sounds available in Strudel by default. Sound names
+and variant counts can change. Check the REPL's Sounds panel or
+[official-docs.md](official-docs.md) when a name fails or current availability
+matters.
+
+Last reviewed against strudel.cc: 2026-08-29.
+
+The sounds below need no `samples()` loading.
 Numbers in parentheses are variant counts (use `n()` or `:index` to pick variants).
 
 ## Usage

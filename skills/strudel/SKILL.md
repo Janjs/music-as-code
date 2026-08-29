@@ -44,7 +44,11 @@ Read [references/strudel-code-guide.md](references/strudel-code-guide.md) when
 writing or debugging Strudel. Read
 [references/strudel-sounds.md](references/strudel-sounds.md) when choosing
 samples, synths, drum machines, or wavetables. Search these references for the
-specific function or sound instead of loading unrelated material.
+specific function or sound instead of loading unrelated material. Read
+[references/official-docs.md](references/official-docs.md) when a bundled
+reference is incomplete, ambiguous, or likely stale. Prefer current official
+documentation when it disagrees with a bundled reference. If documentation
+lookup is unavailable, do not invent an API or sound name.
 
 ## Workflow
 

@@ -59,13 +59,28 @@ with a simple left-hand bass.
 
 Compositions go in `music/`, which is gitignored.
 
+## Strudel documentation
+
+The Strudel skill ships with three references:
+
+- [Code guide](skills/strudel/references/strudel-code-guide.md) for syntax,
+  mini-notation, pattern functions, tempo, harmony, and effects
+- [Sounds catalog](skills/strudel/references/strudel-sounds.md) for built-in
+  samples, drum machines, synths, and wavetables
+- [Official docs index](skills/strudel/references/official-docs.md) for current
+  strudel.cc documentation grouped by task
+
+The bundled guide and sounds list are snapshots. The skill uses the official
+documentation when a function or sound is missing, ambiguous, or newer than
+the bundled references.
+
 ## Repository layout
 
 ```text
 skills/
   strudel/
     SKILL.md                    Agent instructions
-    references/                 Language and sound references
+    references/                 Code guide, sounds, and official docs index
     scripts/strudel-url.mjs     Builds a durable strudel.cc URL from a file
   lilypond/
     SKILL.md                    Agent instructions
