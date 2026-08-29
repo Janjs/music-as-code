@@ -30,9 +30,10 @@ the same command again to update them.
 [Strudel](https://strudel.cc/) is a browser-based live-coding environment for
 algorithmic music, based on the Tidal Cycles pattern language.
 
-The skill writes `.strudel.js`, checks JavaScript syntax locally, and returns a
-playable `strudel.cc` link. It must not open a browser, Playwright, or the REPL
-to validate. The user pressing play is the runtime check.
+Each request produces a local `.strudel.js` file, a JavaScript syntax check,
+and a playable `strudel.cc` link. Open the link and press play to hear it.
+
+Try it with an example prompt:
 
 ```text
 Make a sparse 112 BPM dub-techno loop with restrained 909 drums,
@@ -45,9 +46,11 @@ a minor bass pulse, and hazy electric-piano chords.
 [Hacklily](https://www.hacklily.org/wasm) is the browser editor: source in the
 URL, score and playback in the page.
 
-The skill writes `.ly` and returns a Hacklily link. It must not open a browser
-to validate. If `lilypond` is installed, it also writes PDF and MIDI next to
-the source (`brew install lilypond`, or the installer from lilypond.org).
+Each request produces a local `.ly` file and a Hacklily link. If `lilypond` is
+installed locally, the agent can also compile PDF and MIDI next to the source
+(`brew install lilypond`, or the installer from lilypond.org).
+
+Try it with an example prompt:
 
 ```text
 Write a short piano sarabande in D minor, two eight-bar phrases,

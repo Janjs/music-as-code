@@ -3,3 +3,8 @@
 *.midi
 *.mid
 *.ps
+
+# Skills CLI install targets (use skills/ or .cursor/skills/ from the repo)
+.agents/
+.claude/
+skills-lock.json
