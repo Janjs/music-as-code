@@ -34,6 +34,9 @@
       "Write a LilyPond score and open it in Hacklily.",
       "Create and play a generative SuperCollider piece."
     ],
-    "brandColor": "#7C3AED"
-  }
+  "brandColor": "#2D8B8F",
+  "composerIcon": "./.codex-plugin/music-as-code-plugin-logo.png",
+  "logo": "./.codex-plugin/music-as-code-plugin-logo.png",
+  "logoDark": "./.codex-plugin/music-as-code-plugin-logo-dark.png"
+}
 }

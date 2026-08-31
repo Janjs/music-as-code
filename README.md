@@ -7,39 +7,33 @@ Each request produces an editable music file: `.strudel.js` for Strudel, `.ly`
 for LilyPond, or `.scd` for SuperCollider. Each skill keeps playback separate
 from the source so the file remains editable and versionable.
 
-<table>
-  <tr>
-    <th>Strudel</th>
-    <th>LilyPond </th>
-  </tr>
-  <tr>
-    <td width="50%">
- 
+
+| Strudel | LilyPond |
+| ------- | -------- |
+|         |          |
 
 
-https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef
+[https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef](https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef)
 
 
-</td><td width="50%">
+
+[https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759](https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759)
 
 
 
 
-https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759
-
-
-</td>
-      
-  </tr>
-</table>
 
 ## 🧩 Skills
 
-| Skill | Summary | Source |
-| --- | --- | --- |
-| Strudel | Playable live-coding music in local `.strudel.js` files. | [`skills/strudel`](skills/strudel) |
-| LilyPond | Engraved scores in local `.ly` files, opened in Hacklily. | [`skills/lilypond`](skills/lilypond) |
-| SuperCollider | Synthesis and algorithmic music in local `.scd` files. | [`skills/supercollider`](skills/supercollider) |
+
+| Skill         | Summary                                                   | Source                                         |
+| ------------- | --------------------------------------------------------- | ---------------------------------------------- |
+| Strudel       | Playable live-coding music in local `.strudel.js` files.  | `[skills/strudel](skills/strudel)`             |
+| LilyPond      | Engraved scores in local `.ly` files, opened in Hacklily. | `[skills/lilypond](skills/lilypond)`           |
+| SuperCollider | Synthesis and algorithmic music in local `.scd` files.    | `[skills/supercollider](skills/supercollider)` |
+
+
+
 
 ## ⚙️ Installation
 
@@ -49,12 +43,8 @@ Install with the Skills CLI:
 npx skills add Janjs/music-as-code
 ```
 
-This installs the skills for the coding agents supported by the Skills CLI. Run
+This installs the skills for the coding agents supported by the Skills CLI. Run  
 the same command again to update them.
-
-The repository is also a skill-only Agent Plugin. It does not run an MCP
-server. Each skill hands back clickable source and the open or playback actions
-supported by that music format.
 
 ### 🌀 Strudel
 
@@ -75,6 +65,8 @@ Make a sparse 112 BPM dub-techno loop with restrained 909 drums,
 a minor bass pulse, and hazy electric-piano chords.
 ```
 
+
+
 ### 🎼 LilyPond
 
 [LilyPond](https://lilypond.org/) engraves scores from a text language.
@@ -92,7 +84,9 @@ Write a short piano sarabande in D minor, two eight-bar phrases,
 with a simple left-hand bass.
 ```
 
-### SuperCollider
+
+
+### 🔊 SuperCollider
 
 [SuperCollider](https://supercollider.github.io/) is a programming language,
 audio server, and desktop environment for synthesis and algorithmic music.
@@ -116,11 +110,11 @@ Compositions go in `music/`, which is gitignored.
 The Strudel skill ships with three references:
 
 - [Code guide](skills/strudel/references/strudel-code-guide.md) for syntax,
-  mini-notation, pattern functions, tempo, harmony, and effects
+mini-notation, pattern functions, tempo, harmony, and effects
 - [Sounds catalog](skills/strudel/references/strudel-sounds.md) for built-in
-  samples, drum machines, synths, and wavetables
+samples, drum machines, synths, and wavetables
 - [Official docs index](skills/strudel/references/official-docs.md) for current
-  strudel.cc documentation grouped by task
+strudel.cc documentation grouped by task
 
 The bundled guide and sounds list are snapshots. The skill uses the official
 documentation when a function or sound is missing, ambiguous, or newer than
@@ -147,6 +141,8 @@ skills/
     scripts/supercollider-play.mjs   Plays .scd through local sclang
 plugin.json                    Portable Agent Plugin manifest
 ```
+
+
 
 ## ✅ Validation
 
