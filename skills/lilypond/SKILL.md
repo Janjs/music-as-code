@@ -69,8 +69,8 @@ loading unrelated material.
    exists, otherwise `lilypond -dno-point-and-click -o <stem> <file>`. The
    script prints `pdf:` and `midi:` paths on success. If lilypond is missing
    (script exit 2), skip this step.
-6. Reply with the source path, the Hacklily link, compile status if attempted,
-   and the tempo assumption. Then stop.
+6. Reply with the handoff choices, compile status if attempted, and the tempo
+   assumption. Then stop.
 7. If the user reports a Hacklily or lilypond error, repair the smallest
    responsible part from the error text and repeat steps 4 to 6. Do not open a
    browser to find the error.
@@ -95,14 +95,17 @@ loading unrelated material.
 
 Always include:
 
-- The exact `.ly` path
-- A `hacklily.org/wasm` link built from that file's source
+- **View source:** the exact `.ly` path as a clickable Markdown link
+- **Open score and player:** a `hacklily.org/wasm` link built from that file's
+  source
 - The tempo assumption (for example `quarter = 96`)
 
 When local compile ran, also include:
 
 - Whether it passed or failed
-- The `.pdf` and `.midi` paths if they exist
+- **View score:** the `.pdf` path as a clickable Markdown link
+- **Play locally:** the `.midi` path as a clickable Markdown link. Do not
+  autoplay or claim the host has a MIDI player.
 
 Never claim the score was read or the MIDI was heard unless the user actually
 did that.

@@ -66,8 +66,8 @@ lookup is unavailable, do not invent an API or sound name.
 5. Build a playable REPL link with
    `node skills/strudel/scripts/strudel-url.mjs <file>` or equivalent URL
    encoding: `https://strudel.cc/#` + `encodeURIComponent(source)`.
-6. Reply with the source path, the link, whether `node --check` passed, and
-   the tempo assumption. Then stop.
+6. Reply with the handoff choices, whether `node --check` passed, and the tempo
+   assumption. Then stop.
 7. If the user reports a REPL error, repair the smallest responsible part from
    the error text and repeat steps 4–6. Do not open a browser to find the error.
 
@@ -87,8 +87,9 @@ lookup is unavailable, do not invent an API or sound name.
 
 Always include:
 
-- The exact `.strudel.js` path
-- A `strudel.cc` link built from that file's source
+- **View source:** the exact `.strudel.js` path as a clickable Markdown link
+- **Open and play:** a `strudel.cc` link built from that file's source; playback
+  starts only after the user presses Play
 - Whether `node --check` passed
 - The tempo assumption (BPM and `.cpm()` value)
 
@@ -97,5 +98,6 @@ Optional:
 - If the agent environment supports inline audio playback, the agent may attach
   a short preview. Treat that as a convenience, not the deliverable.
 
-Never claim playback or listening occurred unless the user actually heard it or
-the agent truly rendered audio in a supported environment.
+Strudel requires its browser audio engine, so do not offer fake terminal
+playback. Never claim playback or listening occurred unless the user actually
+heard it or the agent truly rendered audio in a supported environment.

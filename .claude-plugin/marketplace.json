@@ -7,16 +7,16 @@
     "displayName": "music-as-code"
   },
   "metadata": {
-    "description": "Strudel live-coding and LilyPond notation skills."
+    "description": "Strudel, LilyPond, and SuperCollider music skills."
   },
-  "description": "Strudel live-coding and LilyPond notation skills.",
-  "version": "0.1.0",
+  "description": "Strudel, LilyPond, and SuperCollider music skills.",
+  "version": "0.2.0",
   "plugins": [
     {
       "name": "music-as-code",
       "source": "./",
-      "description": "Create editable Strudel patterns and LilyPond scores.",
-      "version": "0.1.0",
+      "description": "Create editable Strudel, LilyPond, and SuperCollider music source.",
+      "version": "0.2.0",
       "author": {
         "name": "Janjs"
       },
@@ -28,6 +28,7 @@
         "music",
         "strudel",
         "lilypond",
+        "supercollider",
         "skills"
       ]
     }

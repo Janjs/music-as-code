@@ -1,0 +1,4 @@
+interface:
+  display_name: "SuperCollider"
+  short_description: "Create, view, and play SuperCollider source"
+  default_prompt: "Use $supercollider to create a playable piece and offer source, IDE, and terminal handoffs."
