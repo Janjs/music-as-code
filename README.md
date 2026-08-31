@@ -5,7 +5,7 @@ files you can edit, version, and play.
 
 Each request produces an editable music file: `.strudel.js` for Strudel, `.ly`
 for LilyPond, or `.scd` for SuperCollider. Each skill keeps playback separate
-from the source so the file remains editable and versionable.
+from the source so the file remains editable and versionable. Examples:
 
 
 | Strudel | LilyPond |
