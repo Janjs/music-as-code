@@ -1,3 +1,11 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+
 /music
 *.pdf
 *.midi
