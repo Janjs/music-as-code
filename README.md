@@ -7,17 +7,16 @@ Each request produces an editable music file: `.strudel.js` for Strudel, `.ly`
 for LilyPond, or `.scd` for SuperCollider. Each skill keeps playback separate
 from the source so the file remains editable and versionable. Examples:
 
-
-| Strudel | LilyPond |
-| ------- | -------- |
-|         |          |
-
-
-[https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef](https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef)
-
-
-
-[https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759](https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759)
+<table>
+  <tr>
+    <th width="50%">Strudel</th>
+    <th width="50%">LilyPond</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/e1f5b8a7-53e9-4ad4-b8cf-00a6e209beef" controls width="100%"></video></td>
+    <td><video src="https://github.com/user-attachments/assets/5f763693-d9c2-41b3-9222-156e67e42759" controls width="100%"></video></td>
+  </tr>
+</table>
 
 
 
