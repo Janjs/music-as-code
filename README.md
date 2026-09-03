@@ -19,21 +19,6 @@ from the source so the file remains editable and versionable. Examples:
 </table>
 
 
-
-
-
-## 🧩 Skills
-
-
-| Skill         | Summary                                                   | Source                                         |
-| ------------- | --------------------------------------------------------- | ---------------------------------------------- |
-| Strudel       | Playable live-coding music in local `.strudel.js` files.  | `[skills/strudel](skills/strudel)`             |
-| LilyPond      | Engraved scores in local `.ly` files, opened in Hacklily. | `[skills/lilypond](skills/lilypond)`           |
-| SuperCollider | Synthesis and algorithmic music in local `.scd` files.    | `[skills/supercollider](skills/supercollider)` |
-
-
-
-
 ## ⚙️ Installation
 
 Install with the Skills CLI:
@@ -44,6 +29,16 @@ npx skills add Janjs/music-as-code
 
 This installs the skills for the coding agents supported by the Skills CLI. Run  
 the same command again to update them.
+
+## 🧩 Skills
+
+
+| Skill         | Summary                                                   | Source                                         |
+| ------------- | --------------------------------------------------------- | ---------------------------------------------- |
+| Strudel       | Playable live-coding music in local `.strudel.js` files.  | `[skills/strudel](skills/strudel)`             |
+| LilyPond      | Engraved scores in local `.ly` files, opened in Hacklily. | `[skills/lilypond](skills/lilypond)`           |
+| SuperCollider | Synthesis and algorithmic music in local `.scd` files.    | `[skills/supercollider](skills/supercollider)` |
+
 
 ### 🌀 Strudel
 
