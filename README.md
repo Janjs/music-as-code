@@ -1,7 +1,9 @@
-# music-as-code 🎵
+# Music as Code 🎵
 
 Agent skills that turn natural-language music requests into local source
 files you can edit, version, and play.
+
+Also available as a [ChatGPT plugin](https://chatgpt.com/plugins/plugins_6a95a30017b8819195268bcdb33e5c07).
 
 Each request produces an editable music file: `.strudel.js` for Strudel, `.ly`
 for LilyPond, or `.scd` for SuperCollider. Each skill keeps playback separate
